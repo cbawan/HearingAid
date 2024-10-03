@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Start/Stop Button -->
+    <Button
+        android:id="@+id/btnStartStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start" />
+
+    <!-- Amplification Control -->
+    <TextView
+        android:id="@+id/tvAmplification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amplification: 1.0x"
+        android:layout_marginTop="16dp"/>
+
+    <SeekBar
+        android:id="@+id/seekBarAmplification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="300"
+        android:progress="100" />
+
+    <!-- Noise Reduction Toggle -->
+    <Switch
+        android:id="@+id/switchNoiseReduction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Noise Reduction"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Equalizer Controls -->
+    <TextView
+        android:id="@+id/tvEqualizer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Equalizer"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Example Equalizer Bands -->
+    <LinearLayout
+        android:id="@+id/equalizerLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Band 1 -->
+        <TextView
+            android:id="@+id/tvBand1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low Frequency: 0dB" />
+
+        <SeekBar
+            android:id="@+id/seekBarBand1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="20"
+            android:progress="10" />
+
+        <!-- Band 2 -->
+        <TextView
+            android:id="@+id/tvBand2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mid Frequency: 0dB" />
+
+        <SeekBar
+            android:id="@+id/seekBarBand2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="20"
+            android:progress="10" />
+
+        <!-- Band 3 -->
+        <TextView
+            android:id="@+id/tvBand3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High Frequency: 0dB" />
+
+        <SeekBar
+            android:id="@+id/seekBarBand3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="20"
+            android:progress="10" />
+    </LinearLayout>
+
+</LinearLayout>
